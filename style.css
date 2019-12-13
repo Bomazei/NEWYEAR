@@ -80,3 +80,32 @@ body {
 .countdown #second:before{
     content: 'Seconds';
 }
+
+
+@media screen and (max-width: 767px){
+    .container {
+        top: 30px;
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+    }
+    .container h2 {
+        font-size: 8em;
+    }
+    .countdown {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .countdown div {
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 767px){
+    .container h2 {
+        font-size: 5em;
+    }
+    * {
+        max-height: 1000px;
+    }
+}
