@@ -92,6 +92,9 @@ body {
     .container h2 {
         font-size: 8em;
     }
+    .container h2 span {
+        letter-spacing: 2px;
+    }
     .countdown {
         display: flex;
         flex-wrap: wrap;
