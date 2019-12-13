@@ -94,7 +94,6 @@ body {
     }
     .countdown {
         display: flex;
-        flex-direction: column;
         flex-wrap: wrap;
     }
     .countdown div {
@@ -102,6 +101,16 @@ body {
     }
 }
 @media screen and (max-width: 425px){
+    .countdown {
+        justify-content: center;
+        align-items: center;
+
+    }
+    .countdown div {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+    }
     .container h2 {
         font-size: 5em;
         margin-top: 0;
