@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Year Is Coming...</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h2><span>Countdown to New Year</span>2020</h2>
+        <div class="countdown">
+            <div id="day">NA</div>
+            <div id="hour">NA</div>
+            <div id="minute">NA</div>
+            <div id="second">NA</div>
+        </div>
+    </div>
+
+    <script>
+        let countDate = new Date('Jan 1, 2020 00:00:00').getTime()
+        
+        function newYear() {
+            let now = new Date().getTime()
+            let gap = countDate - now
+
+            let second = 1000
+            let minute = second * 60
+            let hour = minute * 60
+            let day = hour * 24
+
+            let d = Math.floor(gap / (day))
+            let h = Math.floor((gap % (day)) / (hour))
+            let m = Math.floor((gap % (hour)) / (minute))
+            let s = Math.floor((gap % (minute)) / (second))
+
+            document.querySelector('#day').innerText = d
+            document.querySelector('#hour').innerText = h
+            document.querySelector('#minute').innerText = m
+            document.querySelector('#second').innerText = s
+        }
+
+        setInterval(function(){
+            newYear()
+        },1000)
+    </script>
+</body>
+</html>
