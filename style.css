@@ -101,11 +101,9 @@ body {
         margin-bottom: 50px;
     }
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 425px){
     .container h2 {
         font-size: 5em;
     }
-    * {
-        max-height: 1000px;
-    }
+    
 }
